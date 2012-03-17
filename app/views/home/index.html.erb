@@ -1,0 +1,15 @@
+<%= stylesheet_link_tag 'home' %>
+
+<div id="images">
+
+<section id="thumbnails">
+
+<% for upload in @uploads %>
+  <div class="image">
+    <%= image_tag upload.photo.url(:thumb) %>
+  </div>  
+<% end %>
+
+</section>
+
+</div>
