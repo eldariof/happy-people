@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120317174342) do
+ActiveRecord::Schema.define(:version => 20120318185823) do
 
   create_table "uploads", :force => true do |t|
     t.integer  "user_id"
@@ -25,9 +25,13 @@ ActiveRecord::Schema.define(:version => 20120317174342) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.integer  "rating"
+    t.string   "password"
+    t.string   "confirmation"
+    t.string   "hashed_password"
+    t.string   "salt"
   end
 
 end

@@ -4,6 +4,8 @@
   <tr>
     <th>Name</th>
     <th>Rating</th>
+    <th>Password</th>
+    <th>Salt</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +15,8 @@
   <tr>
     <td><%= user.name %></td>
     <th><%= user.rating %></td>
+    <th><%= user.hashed_password %></td>
+    <th><%= user.salt %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>

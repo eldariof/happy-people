@@ -12,9 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %><br />
-    <%= f.label :rating %><br />
+    <%= f.label :name %><br/>
+    <%= f.text_field :name, :size => 30 %><br/>
+
+    <%= f.label :password %><br/>
+    <%= f.password_field :password, :size => 30 %><br/>
+
+    <%= f.label :confirmation, 'Confirm' %><br/>
+    <%= f.password_field :confirmation, :size => 30 %><br/>
+    
+    <%= f.label :rating %><br/>
     <%= f.number_field :rating %>
   </div>
   <div class="actions">
